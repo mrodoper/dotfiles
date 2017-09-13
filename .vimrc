@@ -113,3 +113,6 @@ let g:syntastic_check_on_wq = 0
 
 nnoremap <silent> <C-d> :lclose<CR>:bdelete<CR>
 cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|bdelete' : 'bd')<CR>
+
+" use system clipboard
+set clipboard=unnamed
