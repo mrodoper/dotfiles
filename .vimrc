@@ -19,6 +19,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-airline/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
+Bundle 'moll/vim-bbye'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -108,8 +109,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-nnoremap <silent> <C-d> :lclose<CR>:bdelete<CR>
-cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|bdelete' : 'bd')<CR>
+" map bdelete to bbye Bdelete
+nnoremap <silent> <C-d> :lclose<CR>:Bdelete<CR>
+cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|Bdelete' : 'bd')<CR>
 
 " use system clipboard
 set clipboard=unnamed
