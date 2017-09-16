@@ -87,12 +87,8 @@ let g:ctrlp_custom_ignore = {
 " set the leader
 let mapleader=","
 
-" Autocompletion
+" Autocompletion generic ycm settings
 let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <leader>s  :YcmCompleter GoToReferences<CR>
-map <leader>o  <C-o>
-map <leader>i  <C-i>
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " Iterate over buffers

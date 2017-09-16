@@ -34,3 +34,9 @@ let g:syntastic_python_checkers=['flake8', 'pylint']
 
 " disable 80 char line width limit check for py files for flake8
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
+
+" python autocompletion shortcuts
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>s  :YcmCompleter GoToReferences<CR>
+map <leader>o  <C-o>
+map <leader>i  <C-i>
