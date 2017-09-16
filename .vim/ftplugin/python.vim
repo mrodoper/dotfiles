@@ -5,6 +5,7 @@ setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal textwidth=120
+setlocal colorcolumn=120
 setlocal smarttab
 setlocal expandtab
 setlocal autoindent
@@ -27,3 +28,9 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 let python_highlight_all=1
+
+
+let g:syntastic_python_checkers=['flake8', 'pylint']
+
+" disable 80 char line width limit check for py files for flake8
+let g:syntastic_python_flake8_args='--ignore=E501,E225'
