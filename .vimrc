@@ -20,6 +20,7 @@ Plugin 'vim-airline/vim-airline'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Bundle 'moll/vim-bbye'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
