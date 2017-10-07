@@ -1,0 +1,35 @@
+[user]
+	name = Mete Rodoper
+	email = mrodoper@gmail.com
+[color]
+	ui = auto
+[color "branch"]
+	current = green
+	local = yellow
+	remote = green
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red
+	new = green
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[alias]
+	# Based on http://michaelwales.com/articles/make-gitconfig-work-for-you/
+  # Delete a branch
+  brdel = branch -D
+  # Which files are receiving the most "love"
+  churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+  # View a pretty git log with branch tree
+  g = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  # Update all submodules
+  subup = submodule update --init
+  # List all tags
+  tags = tag -l
+  # Thin out older metadata within the repository, reduceses filesystem footprint
+  trim = !git reflog expire --expire=now --all && git gc --prune=now
