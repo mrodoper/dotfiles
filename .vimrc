@@ -145,3 +145,6 @@ let g:limelight_priority = -1
 
 " Highlight the search results
 set hlsearch
+
+" Kernel sytle plugin rules
+let g:linuxsty_patterns = [ "/Enter/Kernel/Path" ]
