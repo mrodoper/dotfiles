@@ -1,14 +1,16 @@
 syntax on
 filetype indent plugin on
 set modeline
-setlocal tabstop=4
-setlocal softtabstop=4
-setlocal shiftwidth=4
+setlocal tabstop=8
+setlocal softtabstop=8
+setlocal shiftwidth=8
 setlocal textwidth=80
 setlocal colorcolumn=80
-setlocal smarttab
-setlocal expandtab
+" setlocal smarttab
+" setlocal expandtab
 setlocal autoindent
+setlocal cindent
+setlocal cinoptions=:0,l1,t0,g0,(0
 setlocal fileformat=unix
 
 set encoding=utf-8
