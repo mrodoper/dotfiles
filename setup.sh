@@ -9,6 +9,7 @@ sudo apt-get install python-dev python3-dev
 sudo apt-get install tmux
 sudo apt-get install --assume-yes xclip
 sudo apt-get install silversearcher-ag
+sudo apt-get install tree
 
 echo "Setting up VIM"
 # setup vim
