@@ -146,5 +146,8 @@ let g:limelight_priority = -1
 " Highlight the search results
 set hlsearch
 
+" Change highlight colors
+hi Search cterm=bold ctermfg=black ctermbg=lightgray
+
 " Kernel sytle plugin rules
 let g:linuxsty_patterns = [ "/Enter/Kernel/Path" ]
