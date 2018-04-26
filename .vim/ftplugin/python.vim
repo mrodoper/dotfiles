@@ -31,6 +31,8 @@ let python_highlight_all=1
 
 
 let g:syntastic_python_checkers=['flake8', 'pylint']
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 
 " disable 80 char line width limit check for py files for flake8
 let g:syntastic_python_flake8_args='--ignore=E501,E225'
