@@ -2,7 +2,7 @@
 
 echo "Installing the needed ubuntu packages"
 # install needed packages
-sudo apt-get install vim
+sudo apt-get install vim-gnome
 sudo apt-get install cscope
 sudo apt-get install build-essential cmake
 sudo apt-get install python-dev python3-dev
