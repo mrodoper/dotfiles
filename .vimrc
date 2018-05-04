@@ -116,7 +116,7 @@ nnoremap <silent> <C-d> :lclose<CR>:Bdelete<CR>
 cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|Bdelete' : 'bd')<CR>
 
 " use system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " limelight settings
 " Color name (:help cterm-colors) or ANSI code
