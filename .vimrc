@@ -22,6 +22,7 @@ Plugin 'scrooloose/syntastic'
 Bundle 'moll/vim-bbye'
 Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'junegunn/limelight.vim'
+Plugin 'mileszs/ack.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -151,3 +152,18 @@ hi Search cterm=bold ctermfg=black ctermbg=lightyellow
 
 " Kernel sytle plugin rules
 let g:linuxsty_patterns = [ "/Enter/Kernel/Path" ]
+
+" ACK/AG settings
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+let g:ack_mappings = {
+			\  'v':  '<C-W><CR><C-W>L<C-W>p<C-W>J<C-W>p',
+			\ 'gv': '<C-W><CR><C-W>L<C-W>p<C-W>J' }
+let g:ackhighlight = 1
+" let g:ack_autofold_results = 1 " Hard on eyes to follow the files
+" let g:ackpreview = 1 " Creates new buffer for each file previewed
+let g:ack_use_cword_for_empty_search = 1
