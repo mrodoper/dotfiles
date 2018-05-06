@@ -17,6 +17,10 @@ echo "Setting up ZSH"
 chsh -s /bin/zsh
 cp ./.zshrc ~/
 
+echo "Setting up FZF"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 echo "Setting up oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
