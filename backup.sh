@@ -13,6 +13,9 @@ echo "Backing up TMUX"
 cp ~/.tmux.conf ./
 cp -r ~/.tmux ./
 
+echo "Backing up ZSH"
+cp ~/.zshrc ./
+
 echo "Backing up others (inputrc, git, ...)"
 # backup others
 cp ~/.inputrc ./

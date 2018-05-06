@@ -2,14 +2,20 @@
 
 echo "Installing the needed ubuntu packages"
 # install needed packages
-sudo apt-get install vim-gnome
-sudo apt-get install cscope
-sudo apt-get install build-essential cmake
-sudo apt-get install python-dev python3-dev
-sudo apt-get install tmux
-sudo apt-get install --assume-yes xclip
-sudo apt-get install silversearcher-ag
-sudo apt-get install tree
+sudo apt-get update
+sudo apt-get -y install vim-gnome
+sudo apt-get -y install cscope
+sudo apt-get -y install build-essential cmake
+sudo apt-get -y install python-dev python3-dev
+sudo apt-get -y install tmux
+sudo apt-get -y install --assume-yes xclip
+sudo apt-get -y install silversearcher-ag
+sudo apt-get -y install tree
+sudo apt-get -y install zsh
+
+echo "Setting up ZSH"
+chsh -s /bin/zsh
+cp ./.zshrc ~/
 
 echo "Setting up VIM"
 # setup vim
@@ -36,3 +42,4 @@ cp ./.gitconfig ~/
 cp ./.gitignore_global ~/
 
 echo "Make sure the git config has the correct user.name and email"
+echo "You need to restart your computer to activate ZSH"
