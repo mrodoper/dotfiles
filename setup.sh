@@ -13,6 +13,11 @@ sudo apt-get -y install silversearcher-ag
 sudo apt-get -y install tree
 sudo apt-get -y install zsh
 
+# setup virtualenv for python
+sudo apt-get -y install python3-pip
+pip3 install virtualenv --user
+pip3 install virtualenvwrapper --user
+
 echo "Setting up ZSH"
 chsh -s /bin/zsh
 cp ./.zshrc ~/
