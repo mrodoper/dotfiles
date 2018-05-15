@@ -155,10 +155,11 @@ let g:linuxsty_patterns = [ "/Enter/Kernel/Path" ]
 
 " ACK/AG settings
 let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
+" Do not open the first search result automatically, so use !
+cnoreabbrev ag Ack!
+cnoreabbrev aG Ack!
+cnoreabbrev Ag Ack!
+cnoreabbrev AG Ack!
 
 let g:ack_mappings = {
 			\  'v':  '<C-W><CR><C-W>L<C-W>p<C-W>J<C-W>p',
