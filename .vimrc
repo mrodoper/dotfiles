@@ -23,6 +23,7 @@ Bundle 'moll/vim-bbye'
 Plugin 'christoomey/vim-tmux-navigator'
 Bundle 'junegunn/limelight.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'flazz/vim-colorschemes'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
