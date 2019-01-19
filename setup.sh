@@ -12,6 +12,7 @@ sudo apt-get -y install --assume-yes xclip
 sudo apt-get -y install silversearcher-ag
 sudo apt-get -y install tree
 sudo apt-get -y install zsh
+sudo apt-get -y install curl
 
 # setup virtualenv for python
 sudo apt-get -y install python3-pip
