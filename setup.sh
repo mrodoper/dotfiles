@@ -43,6 +43,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Setting up VIM"
 # setup vim
 cp ./.vimrc ~/
+mkdir -p ~/tmp
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 	echo "Cloning Vundle repo"
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
