@@ -156,7 +156,6 @@ let g:linuxsty_patterns = [ "/Enter/Kernel/Path" ]
 
 " ACK/AG settings
 let g:ackprg = 'ag --vimgrep --smart-case'
-" Do not open the first search result automatically, so use !
 cnoreabbrev ag Ack!
 cnoreabbrev aG Ack!
 cnoreabbrev Ag Ack!
@@ -169,3 +168,4 @@ let g:ackhighlight = 1
 " let g:ack_autofold_results = 1 " Hard on eyes to follow the files
 " let g:ackpreview = 1 " Creates new buffer for each file previewed
 let g:ack_use_cword_for_empty_search = 1
+cabbrev Ack Ack!
