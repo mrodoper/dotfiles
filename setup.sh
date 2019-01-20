@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 echo "Installing the needed ubuntu packages"
 # install needed packages
 sudo apt-get update
