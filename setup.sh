@@ -26,7 +26,15 @@ chsh -s /bin/zsh
 cp ./.zshrc ~/
 
 echo "Setting up FZF"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+if [ ! -d ~/.fzf ]; then
+	echo "Cloning FZF repo"
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+else
+	echo "Skip cloning FZF repo, since it already exists. Instead pull"
+	pushd ~/.fzf
+  git pull
+	popd
+fi
 ~/.fzf/install
 
 echo "Setting up oh-my-zsh"
@@ -35,7 +43,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Setting up VIM"
 # setup vim
 cp ./.vimrc ~/
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+	echo "Cloning Vundle repo"
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+else
+	echo "Skip cloning Vundle repo, since it already exists. Instead pull"
+	pushd ~/.vim/bundle/Vundle.vim
+  git pull
+	popd
+fi
 vim +PluginInstall +qall
 
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
@@ -48,7 +64,9 @@ echo "Setting up TMUX"
 # setup tmux
 cp ./.tmux.conf ~/
 cp -r ./.tmux ~/
-sudo ln -s ~/.tmux/tvim /usr/bin/tvim
+if [ ! -L /usr/bin/tvim ]; then
+	sudo ln -s ~/.tmux/tvim /usr/bin/tvim
+fi
 
 echo "Setting up others (inputrc, git, ...)"
 # setup others
