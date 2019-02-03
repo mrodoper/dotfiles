@@ -110,4 +110,7 @@ compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source `which virtualenvwrapper.sh`
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh
