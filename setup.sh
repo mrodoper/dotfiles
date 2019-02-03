@@ -9,12 +9,14 @@ sudo apt-get -y install vim-gnome
 sudo apt-get -y install cscope
 sudo apt-get -y install build-essential cmake
 sudo apt-get -y install python-dev python3-dev
-sudo apt-get -y install tmux
 sudo apt-get -y install --assume-yes xclip
 sudo apt-get -y install silversearcher-ag
 sudo apt-get -y install tree
 sudo apt-get -y install zsh
 sudo apt-get -y install curl
+sudo apt-get -y install libevent-dev
+sudo apt-get -y install ncurses-dev
+sudo apt-get -y install wget
 
 # setup virtualenv for python
 sudo apt-get -y install python3-pip
@@ -62,6 +64,18 @@ cp ./.ycm_extra_conf.py ~/
 cp -r ./.vim ~/
 
 echo "Setting up TMUX"
+# download tmux
+TMUX_VERSION=2.6
+wget https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz
+tar xf tmux-${TMUX_VERSION}.tar.gz
+rm -f tmux-${TMUX_VERSION}.tar.gz
+# compile and install tmux
+cd tmux-${TMUX_VERSION}
+./configure
+make
+sudo make install
+cd -
+sudo rm -rf ./tmux-${TMUX_VERSION}
 # setup tmux
 cp ./.tmux.conf ~/
 cp -r ./.tmux ~/
