@@ -2,6 +2,19 @@
 
 set -ex
 
+setup_qemu()
+{
+	read -p "Do you want to setup QEMU (y/n)? " answer
+	case ${answer:0:1} in
+		y|Y )
+			sudo apt-get install qemu-kvm qemu virt-manager virt-viewer libvirt-bin
+			;;
+		* )
+			echo "Skipping QEMU setup"
+			;;
+	esac
+}
+
 echo "Installing the needed ubuntu packages"
 # install needed packages
 sudo apt-get update
@@ -91,3 +104,5 @@ cp ./.gitignore_global ~/
 
 echo "Make sure the git config has the correct user.name and email"
 echo "You need to restart your computer to activate ZSH"
+
+setup_qemu
