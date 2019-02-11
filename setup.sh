@@ -30,6 +30,7 @@ sudo apt-get -y install curl
 sudo apt-get -y install libevent-dev
 sudo apt-get -y install ncurses-dev
 sudo apt-get -y install wget
+sudo apt-get -y install htop
 
 # setup virtualenv for python
 sudo apt-get -y install python3-pip
