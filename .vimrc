@@ -66,7 +66,7 @@ nnoremap <C-H> <C-W><C-H>
 set nu
 
 "Set the default directory for swp
-set dir=~/tmp//
+set noswapfile
 
 set tabstop=2
 set shiftwidth=2
